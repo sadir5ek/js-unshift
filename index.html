@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript unshift Методу</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #e3f2fd;
+            color: #333;
+        }
+        h1, h2 {
+            color: #2196f3;
+        }
+        pre {
+            background-color: #f7f7f7;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+        .player-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .player-item {
+            background: #4caf50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        .player-item:hover {
+            transform: scale(1.1);
+        }
+        button {
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #fb8c00;
+        }
+    </style>
+</head>
+<body>
+<script src="./app.js"></script>
+    <h1>JavaScript <code>unshift</code> Методу</h1>
+
+    <h2>1. Түшүндүрмө</h2>
+    <p><code>unshift</code> методу массивдин башына бир же бир нече элементтерди кошуп, массивдин узундугун арттырат. Бул метод массивдин биринчи элементтерин оңдоп, жаңы элементтерди баштапкы орунга жайгаштырууга мүмкүндүк берет. Эгер массив бош болсо, <code>unshift</code> жаңы элементтер менен толтурат.</p>
+
+    <h2>2. Синтаксис</h2>
+    <p>Синтаксис - бул программалоо тилинде конструкцияларды жазуу эрежелери. Ал коддун туура иштеши үчүн зарыл болгон структураны аныктайт.</p>
+    <pre><code>array.unshift(element1, element2, ..., elementN);</code></pre>
+    <ul>
+        <li><strong>array</strong>: Сиздин массив.</li>
+        <li><strong>element1, element2, ..., elementN</strong>: Кошулган элементтер.</li>
+    </ul>
+
+    <h2>3. Кайтаруучу мааниси</h2>
+    <p><code>unshift</code> методу массивдин жаңы узундугун кайтарат. Эгер массив бош болсо, ал элементтерди жаңы массив түзүп кошот.</p>
+
+    <h2>4. Кызыктуу Мисал: Спорттук Команда</h2>
+    <p>Келгиле, биздин командага жаңы оюнчуларды кошуп, күчтүү команда түзөбүз!</p>
+    
+    <div class="player-list" id="playerList">
+        <div class="player-item">10</div>
+        <div class="player-item">23</div>
+        <div class="player-item">34</div>
+    </div>
+
+    <button id="addPlayers">Жаңы Оюнчуларды Кошуу!</button>
+
+    <h2>5. Кошумча Оюнчулар</h2>
+    <p>Биздин командага дагы оюнчулар кошулууда. Келгиле, 7 жана 9 номерлүү оюнчуларды кошуп, командабызды күчөтөлү!</p>
+    <!-- <h2>3. Кызыктуу Мисал: Сандар Тизмеги</h2>
+<p>Жаңы сандарды кошуп, уникалдуу сандар тизмегин түзөбүз!</p>
+
+<div class="number-list" id="numberList">
+    <div class="number-item">1</div>
+    <div class="number-item">2</div>
+    <div class="number-item">3</div>
+</div>
+
+<button id="addNumbers">Жаңы Сандарды Кошуу!</button>
+
+<h2>4. Код</h2>
+<pre><code>
+let numbers = [1, 2, 3]; // Баштапкы сандар
+
+document.getElementById('addNumbers').addEventListener('click', () => {
+    // unshift методу аркылуу жаңы сандарды массивдин башына кошуу
+    numbers.unshift(0, -1); // [0, -1, 1, 2, 3]
+
+    // DOM элементтерин жаңыртуу
+    document.getElementById('numberList').innerHTML = 
+        numbers.map(num => \`<div class="number-item">\${num}</div>\`).join('');
+});
+</code></pre>
+
+<h2>5. <code>unshift</code> Методунун Иштеши</h2>
+<p><code>unshift</code> методу массивдин башына элементтерди кошот. Бул метод массивдин узундугун арттырып, жаңы элементтерди биринчи орунга жайгаштырууга мүмкүндүк берет.</p>
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f0f8ff;
+        color: #333;
+        margin: 20px;
+    }
+    h2 {
+        color: #007acc;
+    }
+    .number-list {
+        margin-bottom: 20px;
+    }
+    .number-item {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-right: 5px;
+        transition: transform 0.3s;
+    }
+    .number-item:hover {
+        transform: scale(1.1);
+    }
+    button {
+        background-color: #ff9800;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+    button:hover {
+        background-color: #fb8c00;
+    }
+</style> -->
+
+    <div class="player-list" id="newPlayerList">
+        <div class="player-item">7</div>
+        <div class="player-item">9</div>
+    </div>
+
+    <h2>6. Эскертүүлөр</h2>
+    <p>Эгер массив бош болсо, <code>unshift</code> методу жаңы элементтер менен толтурат. Бул ыкма сандардын командасын кеңейтет!</p>
+
+    <script>
+        // Баштапкы команда
+        let teamPlayers = [10, 23, 34];
+
+        // Функция оюнчуларды кошуу
+        document.getElementById('addPlayers').addEventListener('click', function() {
+            // Жаңы оюнчулар
+            const newPlayers = [7, 9];
+            // Оюнчуларды кошуу
+            teamPlayers.unshift(...newPlayers);
+
+            // DOM элементтерин жаңыртуу
+            const playerList = document.getElementById('playerList');
+            playerList.innerHTML = ''; // Бошотуу
+
+            teamPlayers.forEach(player => {
+                const playerItem = document.createElement('div');
+                playerItem.className = 'player-item';
+                playerItem.textContent = player;
+                playerList.appendChild(playerItem);
+            });
+        });
+    </script>
+
+</body>
+</html>
